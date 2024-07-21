@@ -52,10 +52,10 @@
         COMBO(lbrc, 15 16, &kp LBRC, BASE  SYM  NUM, MS_SLOW)
         COMBO(rbrc, 18 19, &kp RBRC, BASE  SYM  NUM, MS_SLOW)
         // delete actions
-        COMBO(bspc, 6 7, &kp BSPC, BASE  NAV NAVW NUM, MS_SLOW)
-        COMBO(del, 6 8, &kp DEL, BASE  NAV NAVW NUM, MS_SLOW)
+        COMBO(bspc, 6 7, &kp BSPC, BASE  NAV  NUM, MS_SLOW)
+        COMBO(del, 6 8, &kp DEL, BASE  NAV  NUM, MS_SLOW)
         COMBO(del_word, 6 7 8, &kp LA(BSPC), BASE, MS_SLOW)
-        COMBO(del_line, 6 7 8, &del_line, NAV NAVW, MS_FAST)
+        COMBO(del_line, 6 7 8, &del_line, NAV , MS_FAST)
     // mouse layer
         COMBO(mouse, 10 32, &mo MSE, BASE , MS_SLOW)
     };
