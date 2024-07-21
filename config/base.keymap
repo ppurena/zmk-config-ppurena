@@ -201,7 +201,13 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp COLON>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
+        };
+        minus_under: minus_under {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
+            mods = <(MOD_LSFT)>;
         };
         left_home: left_home {
             compatible = "zmk,behavior-mod-morph";
@@ -233,7 +239,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMICOLON>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
         quest_excl: quest_excl {
             compatible = "zmk,behavior-mod-morph";
@@ -276,13 +282,13 @@
             display-name = "APTMAK";
             bindings = <
              //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-                &kp Q           &kp W          &kp E          &kp R          &kp T                &kp Y          &kp U          &kp I          &kp Y          RTR
+                 &kp Q          &kp W          &kp E          &kp R          &kp T                &kp Y          &kp U          &kp I          &kp O          &kp P
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-                &hml LCTRL R   &hml LALT S    &hml LSHIFT T  &hml LGUI H    &kp K                &kp X          &hmr RGUI N    &hmr RSHIFT A  &hmr RALT I    &hmr RCTRL O
+                 &hml LGUI A    &hml LALT S    &hml LCTRL  D  &hml LSHIFT H  &kp G                &kp H          &hmr RSHIFT J  &hmr RCTRL K   &hmr RALT L   &hmr RGUI RA(E)
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-                LBL            &kp C          &kp G          &kp D          LBR                  RBL            &kp M          &comma_semi    &dot_colon     RBR
+                 &kp Z          &kp X          &kp C          &kp V          &kp B                &kp N          &kp M          &comma_semi    &dot_colon     &minus_under
              //╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                              xxx            &lt NUM RET    &lt_spc NAV 0        &lt SYM E      &lt_shft meh 0 xxx
+                                              &lt_shft meh 0  &lt NUM SPACE  &lt_spc NAV 0         &kp BSPC       &lt SYM DEL   &kp RET 
              //                              ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯
             >;
         };
@@ -308,7 +314,7 @@
              //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
                 xxx            &kp F5         &kp F7         &kp F9         &kp F10              &kp E          &kp N7         &kp N8         &kp N9         xxx
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-                ___            ___            ___            ___            &kp F12              &kp COMMA      &kp N1         &kp N2         &kp N3         &kp N0
+                 &kp N1         &kp N2         &kp N3         &kp N4         &kp N5               &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
                 xxx            xxx            xxx            xxx            xxx                  xxx            &kp N4         &kp N5         &kp N6         xxx
              //╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
@@ -351,16 +357,17 @@
             display-name = "SYM";
             bindings = <
              //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-                xxx            &kp AT         &kp HASH       &kp AMPS       &kp PERCENT          &kp CARET      &kp PLUS       &kp ASTRK      &curr_deg      xxx
+                &kp GRAVE       &kp DQT        &kp PLUS       &kp ASTRK      &kp PERCENT          &kp PIPE       &kp LBRC       &kp RBRC       &kp QMARK      &curr_deg
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-                &kp QUESTION   &kp GRAVE      &kp BSLH       &kp PIPE       &kp TILDE            &kp UNDER      &kp MINUS      &kp SLASH      &kp EQUAL      &kp EXCL
+                 &kp AT         &kp SQT        &kp LT         &kp GT         &kp EQUAL            &kp AMPS       &kp LPAR       &kp RPAR       &kp DLLR        xxx
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-                xxx            &kp RA(GRAVE)  &kp RA(E)      &kp LT         xxx                  xxx            &kp GT         &kp SEMI       &kp COLON      xxx
+                xxx             &kp NUBS       &kp FSLH       &kp HASH       &kp CARET            &kp TILDE      &kp LBKT       &kp RBKT       &kp EXCL        xxx
              //╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
                                               xxx            ___            ___                  ___            xxx            xxx
              //                              ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯
             >;
         };
+
 
         symbols_win {
             display-name = "SYM_W";
