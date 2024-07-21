@@ -26,9 +26,6 @@
 #endif
 #include "common/macros.dtsi"
 
-
-#define MOUSE_KEYS;
-
 #ifdef MOUSE_KEYS
     #include "common/mouse.dtsi"
 #endif
