@@ -23,21 +23,14 @@
 #define CONCAT2(x, y) x ## y
 #define CONCAT(x, y) CONCAT2(x, y)
 #define COMBO(name, pos, k, l, t) CONCAT(combo_, name) { key-positions = <pos>; bindings = <k>; layers = <l>; timeout-ms = <t>; };
-    // missing letters
-    #if ALPHA_23332 || ALPHA_13332 || DUMMY_KEEB
-        COMBO(q, 1 3, &kp Q, BASE , MS_SLOW)
-        COMBO(z, 2 3, &kp V, BASE , MS_SLOW)
-        COMBO(v, 1 2, &kp Z, BASE , MS_SLOW)
-        COMBO(quote, 7 8, &single_to_doublequote , BASE , MS_SLOW)
-    #endif
     // left-hand side combos
         // COMBO(quit, 1 2, &kp LG(Q), BASE)
         // COMBO(cltab, 2 3, &kp LG(W), BASE)
         COMBO(esc, 11 12, &esc_kcancel, BASE , MS_FAST)
         COMBO(tab, 12 13, &kp TAB, BASE , MS_FAST)
-        COMBO(copy, 21 22, &kp LG(C), BASE, MS_SLOW)
-        COMBO(paste, 22 23, &kp LG(V), BASE, MS_SLOW)
-        COMBO(cut, 21 22 23, &kp LG(X), BASE, MS_SLOW)
+        COMBO(copy, 1 2, &kp LG(C), BASE, MS_SLOW)
+        COMBO(paste, 2 3, &kp LG(V), BASE, MS_SLOW)
+        COMBO(cut, 1 2 3, &kp LG(X), BASE, MS_SLOW)
         COMBO(undo, 10 11, &kp LG(Z), BASE, MS_FAST)
         COMBO(redo, 13 14, &kp LG(LS(Z)), BASE, MS_FAST)
     // right-hand side combos
@@ -52,11 +45,8 @@
         COMBO(lbrc, 15 16, &kp LBRC, BASE  SYM  NUM, MS_SLOW)
         COMBO(rbrc, 18 19, &kp RBRC, BASE  SYM  NUM, MS_SLOW)
         // delete actions
-        COMBO(bspc, 6 7, &kp BSPC, BASE  NAV  NUM, MS_SLOW)
         COMBO(del, 6 8, &kp DEL, BASE  NAV  NUM, MS_SLOW)
-        COMBO(del_word, 6 7 8, &kp LA(BSPC), BASE, MS_SLOW)
+        COMBO(del_word, 6 7, &kp LA(BSPC), BASE, MS_SLOW)
         COMBO(del_line, 6 7 8, &del_line, NAV , MS_FAST)
-    // mouse layer
-        COMBO(mouse, 10 32, &mo MSE, BASE , MS_SLOW)
     };
 };
