@@ -40,13 +40,13 @@
         COMBO(lpar, 16 17, &kp LPAR, BASE  SYM  NUM, MS_FAST)
         COMBO(rpar, 17 18, &kp RPAR, BASE  SYM  NUM, MS_FAST)
         // brackets combos
-        COMBO(lbkt, 26 27, &kp LBKT, BASE  SYM  NUM, MS_FAST)
-        COMBO(rbkt, 27 28, &kp RBKT, BASE  SYM  NUM, MS_FAST)
+        COMBO(lbkt, 6 7, &kp LBKT, BASE  SYM  NUM, MS_FAST)
+        COMBO(rbkt, 7 8, &kp RBKT, BASE  SYM  NUM, MS_FAST)
         // braces combos
         COMBO(lbrc, 15 16, &kp LBRC, BASE  SYM  NUM, MS_SLOW)
         COMBO(rbrc, 18 19, &kp RBRC, BASE  SYM  NUM, MS_SLOW)
         // delete actions
-        COMBO(del_word, 6 7 , &kp LA(BSPC), BASE, MS_SLOW)
-        COMBO(del_line, 6 7 8, &del_line, BASE NAV , MS_FAST)
+        //COMBO(del_word, 6 7 , &kp LA(BSPC), BASE, MS_SLOW)
+        //COMBO(del_line, 6 7 8, &del_line, BASE NAV , MS_FAST)
     };
 };
