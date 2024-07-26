@@ -47,6 +47,6 @@
         COMBO(rbrc, 18 19, &kp RBRC, BASE  SYM  NUM, MS_SLOW)
         // delete actions
         COMBO(del_word, 6 7 , &kp LA(BSPC), BASE, MS_SLOW)
-        COMBO(del_line, 6 7 8, &del_line, NAV , MS_FAST)
+        COMBO(del_line, 6 7 8, &del_line, BASE NAV , MS_FAST)
     };
 };
