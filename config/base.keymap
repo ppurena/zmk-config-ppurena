@@ -16,6 +16,8 @@
 
 #include "common/combos.dtsi"
 #include "common/extra_keys.h"
+
+#include "common/mouse.dtsi"
 #if WIRELESS
     #include <dt-bindings/zmk/bt.h>
     #define BTL1  &bt BT_CLR   &bt BT_SEL 2  &pc_connect   &osx_connect
@@ -27,7 +29,7 @@
 #include "common/macros.dtsi"
 
 #ifdef MOUSE_KEYS
-    #include "common/mouse.dtsi"
+    //#include "common/mouse.dtsi"
 #endif
 
 // tapping term definition
